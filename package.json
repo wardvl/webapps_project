@@ -2,6 +2,9 @@
   "name": "webapps-project",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node":"8.6.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
