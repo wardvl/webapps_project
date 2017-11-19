@@ -16,4 +16,5 @@ export class AppComponent {
       // Access the Data Service's getUsers() method we defined
       this._dataService.getUsers()
           .subscribe(res => this.users = res);
+  }
 }
