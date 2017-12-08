@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class AuthenticationService {
-  private _url = '/API'
+  private _url = './API'
   private _user$: BehaviorSubject<String>;
   public redirectUrl: string;
 

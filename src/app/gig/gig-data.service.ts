@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class GigDataService {
-  private _appUrl = "http://localhost:4300/API";
+  private _appUrl = "./API";
 
   constructor(private http: Http, private auth: AuthenticationService) {
   }
