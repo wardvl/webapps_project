@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div *ngIf="gig" class="col-lg-8 col-md-12 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4 class="card-title">{{gig.description}}<br/><em>{{gig.date | date:'EEEE dd-MM-yyyy HH:mm'}}</em></h4>
+        <p class="card-text">
+          {{gig.venue.name}}<br/>
+          {{gig.venue.address_street}} {{gig.venue.address_number}}<br/>
+          {{gig.venue.address_postalcode}} {{gig.venue.address_city}}<br/>
+          {{gig.venue.telephone}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

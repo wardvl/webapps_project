@@ -1,43 +1,41 @@
 {
-  "name": "webapps-project",
+  "name": "lady-like",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "server.js",
-  "engines": {
-    "node": "8.x.x",
-    "npm": "5.x.x"
-  },
   "scripts": {
     "ng": "ng",
+    "start": "SET PORT=4200&&SET DBHOST=Vandendrroot:LadyLike!8@84.246.4.143&&SET DBPORT=9130&&SET DBNAME=vandendrladylike&& nodemon backend.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.2.4",
-    "@angular/cli": "1.4.4",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
-    "@angular/compiler-cli": "^4.2.4",
     "@angular/core": "^4.2.4",
     "@angular/forms": "^4.2.4",
     "@angular/http": "^4.2.4",
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-    "body-parser": "^1.18.2",
+    "bluebird": "^3.5.1",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "express": "^4.16.2",
-    "font-awesome": "^4.7.0",
-    "mongoose": "^4.13.4",
+    "express-jwt": "^5.3.0",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "jsonwebtoken": "^8.1.0",
     "morgan": "^1.9.0",
-    "ng": "0.0.0-rc6",
+    "mysql2": "^1.5.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "rxjs": "^5.4.2",
-    "typescript": "~2.3.3",
+    "sequelize": "^4.26.0",
+    "startbootstrap-shop-homepage": "^4.0.0-beta",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -58,6 +56,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
-    "tslint": "~5.7.0"
+    "tslint": "~5.7.0",
+    "typescript": "~2.3.3"
   }
 }

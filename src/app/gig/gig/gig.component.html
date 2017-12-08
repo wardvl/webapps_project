@@ -1,0 +1,27 @@
+<div *ngIf="gig">
+  <div class="card h-100">
+    <div class="card-body">
+      <button type="button" (click)="removeGig()" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div routerLinkActive='active' [routerLink]="['../detail', gig.id]">
+        <h4 class="card-title">
+          {{gig.description}}
+        </h4>
+        <p class="card-text">
+          {{gig.venue.name}}
+          <br /> {{gig.venue.address_city}}
+        </p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted row">
+        <div class="col-12 text-right">
+          <em>
+            {{gig.date | date:'EEEE dd-MM-yyyy HH:mm'}}
+          </em>
+        </div>
+      </small>
+    </div>
+  </div>
+</div>

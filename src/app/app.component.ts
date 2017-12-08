@@ -1,5 +1,6 @@
+import { Observable } from 'rxjs/Rx';
+import { AuthenticationService } from './user/authentication.service';
 import { Component } from '@angular/core';
-import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,13 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // Define a users property to hold our user data
-  users: Array<any>;
-  
-    // Create an instance of the DataService through dependency injection
-    constructor(private _dataService: DataService) {
-  
-      // Access the Data Service's getUsers() method we defined
-      this._dataService.getUsers()
-          .subscribe(res => this.users = res);
+  title = 'app';
+  date = new Date();
+
+  constructor(private auth: AuthenticationService) {}
+
+  get currentUser(): Observable<String> {
+    console.log(this.auth.user$)
+    return this.auth.user$
   }
 }

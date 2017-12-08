@@ -1,0 +1,16 @@
+[
+    {
+        "firstName": "Maaike",
+        "lastName": "Van den dries",
+        "hash": "DitIsEenTestWachtwoord",
+        "email": "maaike@ladylikemusic.be",
+        "role": "ADMIN"
+    },
+    {
+        "firstName": "Ward",
+        "lastName": "Vanlerberghe",
+        "hash": "DitIsEenTestWachtwoord",
+        "email": "webmaster@ladylikemusic.be",
+        "role": "ADMIN"
+    }
+]

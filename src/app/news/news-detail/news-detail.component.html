@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div *ngIf="news" class="col-lg-8 col-md-12 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h4 class="card-title">
+                    {{news.title}}
+                </h4>
+                <p class="card-text">{{news.content}}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted row">
+                    <div class="col-7">
+                        <em *ngFor="let author of news.authors">
+                            &nbsp;{{author.firstName}}
+                        </em>
+                    </div>
+                    <div class="col-5">
+                        <em>
+                            {{news.date | date:'dd-MM-yyyy'}}
+                        </em>
+                    </div>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>

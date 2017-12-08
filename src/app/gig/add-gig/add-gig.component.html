@@ -1,0 +1,69 @@
+<div class="row">
+  <form class="col-lg-5 col-md-12" [formGroup]='_gig' (ngSubmit)='onSubmit()' id="gigForm">
+    <h3>Optreden toevoegen</h3>
+    <div class="form-group">
+      <label for="Title">Omschrijving</label>
+      <input class="form-control" type='text' id="description" formControlName='description' />
+    </div>
+    <div class="form-group">
+      <label for="date">Datum</label>
+      <input class="form-control" type="date" id="date" formControlName='date' />
+    </div>
+    <label id="venue-label" for="venue">Concertzaal</label>
+    <div class="input-group mb-4">
+      <select class="form-control" aria-label="venue-label" form="gigForm" id="venue" formControlName='venue'>
+        <option *ngFor="let venue of venues" [value]="venue.id">{{venue.name}} {{venue.address_city}}</option>
+      </select>
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" (click)="addVenue()" class="btn btn-default btn-sm">
+          toevoegen
+        </button>
+      </span>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" [disabled]='isAddVenue || !_gig.valid'>
+        Toevoegen
+      </button>
+    </div>
+  </form>
+  <div class="col-lg-2 col-md-0"></div>
+
+
+  <form class="col-lg-5 col-md-12" *ngIf="isAddVenue" [formGroup]="_venue" (ngSubmit)='onSubmitVenue()'>
+    <h3>Concertzaal toevoegen</h3>
+    <div class="form-group">
+      <label for="name">Naam</label>
+      <input class="form-control" type="text" id="name" formControlName='name' />
+    </div>
+    <div class="row">
+      <div class="form-group col-8">
+        <label for="street">Straat</label>
+        <input type="text" class="form-control" id="street" formControlName='address_street' />
+      </div>
+      <div class="form-group col-4">
+        <label for="number">Nummer</label>
+        <input type="text" class="form-control" id="number" formControlName='address_number' />
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-8">
+        <label for="city">Stad</label>
+        <input type="text" class="form-control" id="city" formControlName='address_city' />
+      </div>
+      <div class="form-group col-4">
+        <label for="postalcode">Postcode</label>
+        <input type="text" class="form-control" id="postalcode" formControlName='address_postalcode' />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="telephone">Telefoon</label>
+      <input type="text" class="form-control" id="telephone" formControlName='telephone' />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" [disabled]='!_venue.valid'>
+        Toevoegen
+      </button>
+      <button type="reset" class="btn" (click)="cancelAddVenue()">Annuleer</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,20 @@
+<div class="row">
+  <app-gig *ngFor="let gig of gigs" [gig]="gig" 
+  class="col-lg-6 col-md-12 mb-4 align-items-stretch" (deleteGig)="deleteGig($event)">
+  </app-gig>
+  <div class="col-lg-6 col-md-12 mb-4 align-items-stretch">
+      <div class="card h-100" routerLinkActive='active' [routerLink]="['../add']">
+          <div class="card-body">
+              <h4 class="card-title">
+                  Voeg een optreden toe
+              </h4>
+              <h1 class="card-text text-center">+</h1>
+          </div>
+          <div class="card-footer">
+              <small class="text-muted">
+                  Voeg mij toe.
+              </small>
+          </div>
+      </div>
+  </div>
+</div>

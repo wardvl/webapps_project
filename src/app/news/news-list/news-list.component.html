@@ -1,0 +1,19 @@
+<div class="row">
+    <app-news *ngFor="let newsItem of news" [news]="newsItem" class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch" (deleteNews)="deleteNews($event)">
+    </app-news>
+    <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+        <div class="card h-100" routerLinkActive='active' [routerLink]="['../add']">
+            <div class="card-body">
+                <h4 class="card-title">
+                    Voeg een nieuwsitem toe
+                </h4>
+                <h1 class="card-text text-center">+</h1>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">
+                    Voeg mij toe.
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
