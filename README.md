@@ -1,6 +1,7 @@
 # LadyLike
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4..
+The link to this app in productions is http://wardvanlerberghe.herokuapp.com
 
 ## Development server
 
