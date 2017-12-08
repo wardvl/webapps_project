@@ -43,7 +43,7 @@ module.exports = function(app, config) {
     var UserNews = require('../models/user_news')(config)
 
     // Create class database table
-    config.sequelize.sync({ force: true })
+    config.sequelize.sync({ force: config.forceCreateTables })
     .then(res => SequelizeSeeder.seedModelFromJsonFile(User, config.rootPath +'/backend/models/seederfiles/users.json'))
     .then(res => SequelizeSeeder.seedModelFromJsonFile(News, config.rootPath +'/backend/models/seederfiles/news.json'))
     .then(res => SequelizeSeeder.seedModelFromJsonFile(UserNews, config.rootPath +'/backend/models/seederfiles/news_users.json'))

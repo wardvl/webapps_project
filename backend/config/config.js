@@ -8,10 +8,10 @@ module.exports = {
     rootPath: path.normalize(__dirname + '/../../'),
     
     // Contains the server port
-    port: process.env.PORT,
+    port: process.env.PORT || 8080,
 
     // Contains the development environment state
-    get isDevelopment() { return (process.env.NODE_ENV) === 'development'; },
+    get isDevelopment() { return (process.env.NODE_ENV) || 'development' === 'development'; },
     
     // Contains the db host
     dbHost: process.env.DBHOST,
@@ -29,5 +29,5 @@ module.exports = {
     sequelize: null,
 
     // Contains wheter we will recreate the database tables
-    get forceCreateTables() { return this.isDevelopment }
+    get forceCreateTables() { return this.isDevelopment && true}
 }

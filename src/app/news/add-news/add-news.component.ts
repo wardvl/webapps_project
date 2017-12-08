@@ -12,7 +12,7 @@ import { News } from '../news.model';
   providers: [ NewsDataService ]
 })
 export class AddNewsComponent implements OnInit {
-  private _news: FormGroup;
+  public _news: FormGroup;
 
   constructor(private _newsDataService: NewsDataService, private _router: Router) { }
 

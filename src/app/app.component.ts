@@ -14,7 +14,6 @@ export class AppComponent {
   constructor(private auth: AuthenticationService) {}
 
   get currentUser(): Observable<String> {
-    console.log(this.auth.user$)
     return this.auth.user$
   }
 }

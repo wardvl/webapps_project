@@ -13,7 +13,7 @@ import { Gig } from '../gig.model';
   providers: [GigDataService, VenueDataService]
 })
 export class AddGigComponent implements OnInit {
-  private _gig: FormGroup
+  public _gig: FormGroup
   private _venue: FormGroup
   private _venues: Venue[]
   private _isAddVenue: boolean
